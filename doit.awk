@@ -6,7 +6,7 @@ BEGIN {
     FS = "/" 
 }
 
-NR < 3 {
+{
     filename = sprintf("%04d%02d%02d-%s", $(NF-3), $(NF-2), $(NF-1), $(NF))
     sub(/\.html/, "", filename)
     pd="pandoc --request-header User-Agent:\"Mozilla/5.0\" --standalone --from html " $0 " --to markdown --output markdown/" filename ".md --embed-resources"
