@@ -20,7 +20,7 @@ The script, in turn:
 
 ## Why did you use AWK to do this?
 
-I like AWK, and iterating through "arrays" in bash scripts or makefiles is a pain (imagine Captain Kirk screaming `xargs` instead of Khan), whereas iterating through lines in AWK and running a command is very natural. I have skipped checking for errors in the `pandoc` commands (you can get the output code from `system` as a return value, though) for brevity, but seriously, AWK is very convenient when you have something quick, dirty and where you know `bash` is going to be a pain.
+I like AWK, and iterating through "arrays" in bash scripts or makefiles is a pain (imagine Captain Kirk screaming `xargs` instead of Khan), whereas iterating through lines in AWK and running a command is natural. I have skipped checking for errors in the `pandoc` commands (you can get the output code from `system` as a return value, though) for brevity, but seriously, AWK is very convenient when you have something quick, dirty and where you know `bash` is going to be a pain.
 
 ## Some caveats
 
