@@ -7,7 +7,7 @@ Since I recently got a Kindle Paperwhite I'm really liking ([here's another rece
 ## The process
 
 - A list of URLs is available in the file `urls`, which is parsed via…
-- The `doit.awk` script ([name inspiration](https://disenchantment.fandom.com/wiki/Luci)), by running `./doit.awk urls` (you need gawk).
+- The `doit.awk` script ([name inspiration](https://disenchantment.fandom.com/wiki/Luci)), by running `./doit.awk -v download=1 title="High scalability" urls` (you need gawk).
 
 The script, in turn:
 
@@ -25,5 +25,7 @@ I like AWK, and iterating through "arrays" in bash scripts or makefiles is a pai
 ## Some caveats
 
 The parsing in `clean.awk` is tied specifically to the formatting in _High Scalability_: if you want to use your own URLs, comment all the system commands in `doit.awk` (`#` for comments in AWK), run manually the pandoc extraction and check what the markdown looks like, then parse accordingly.
+
+I have also a `clean_login.awk` file for USENIX's `;login:` articles.
 
 I have only checked the first 3-4 posts for consistency in the generated markdown/EPUB. Since they were OK my expectation is that _all are OK_ which is as good as it gets until I read them all. [Caveat emptor](https://en.wikipedia.org/wiki/Caveat_emptor).
